@@ -1,0 +1,10 @@
+version: '3'
+services:
+    server:
+        build: ./p4/
+    proxy-nginx:
+        image: nginx
+        ports:
+            - 80:8080
+        volumes:
+            - ./p6/nginx.conf:/etc/nginx/nginx.conf
